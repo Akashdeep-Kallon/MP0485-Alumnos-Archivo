@@ -21,7 +21,7 @@ public class RegistrarAlumno {
 
     static Scanner sc = new Scanner(System.in);
     static String read;
-    static String registro;
+    static String registro = "";
 
     final static String ruta = System.getProperty("user.dir");
     final static String rutaCarpeta = ruta + File.separator + "src" + File.separator + "registro";
