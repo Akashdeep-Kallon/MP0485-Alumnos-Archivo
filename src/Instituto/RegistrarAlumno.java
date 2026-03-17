@@ -101,10 +101,10 @@ public class RegistrarAlumno {
                 fr = new FileReader(registroArchivo);
                 br = new BufferedReader(fr);
                 while ((read = br.readLine()) != null) {
-                    if (read.contains(dni)) {
-                        System.out.println("Se ha eliminado el alumno de la base de datos.");
+                    if (!read.contains(dni)) {
+                        registro += read + System.getProperty("line.separator");
                     } else {
-                        registro = read + System.getProperty("line.separator");
+                        System.out.println("Se ha eliminado el alumno de la base de datos.");    
                     }
                 }
                 br.close();
